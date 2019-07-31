@@ -13,7 +13,6 @@ class FlightSerializer(serializers.ModelSerializer):
 
 class BookingSerializer(serializers.ModelSerializer):
 	flight = serializers.SlugRelatedField(
-        many=True,
         read_only=True,
         slug_field='destination'
      )
